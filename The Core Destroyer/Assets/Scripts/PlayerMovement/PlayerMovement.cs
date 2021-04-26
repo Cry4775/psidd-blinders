@@ -3,19 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// Made by Cube
+// Made by CRY
 public class PlayerMovement : MonoBehaviour
 {
-    /* 
-        If any of my comments are wrong or confusing please let me know since I'm trying to get better at
-        writing good comments for my code.
-
-        Also I recommend looking into Unity's new Input system so that you can understand in a bit more detail
-        how I set this up
-
-        below is a link to a video by brackeys that explains how it works
-        https://www.youtube.com/watch?v=Pzd8NhcRzVo&t=685s
-    */
+    // Brackeys that explains how it works https://www.youtube.com/watch?v=Pzd8NhcRzVo&t=685s
     
     #region REFERENCES
 
