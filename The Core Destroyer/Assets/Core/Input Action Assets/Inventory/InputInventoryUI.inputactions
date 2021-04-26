@@ -1,0 +1,74 @@
+{
+    "name": "InputInventoryUI",
+    "maps": [
+        {
+            "name": "Inventory UI navigation",
+            "id": "058ba5b0-6ace-455d-9d28-4c7342d6fdbf",
+            "actions": [
+                {
+                    "name": "Equip",
+                    "type": "Button",
+                    "id": "10102e25-7d6d-4c46-b90b-ee3d3f39bfd5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Drop",
+                    "type": "Button",
+                    "id": "e7b0cf2f-9c52-4414-9556-5f29410656ed",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2a6c2f08-3d73-4f9d-86fe-c1362bd869f9",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Equip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bd520b03-d266-4993-b22c-32c27f315bb9",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Equip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb5a3244-8280-41a4-ac0a-d3c31efa8b4a",
+                    "path": "<Keyboard>/delete",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "123c3669-c904-47bd-bcf4-e3de4cd23670",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
