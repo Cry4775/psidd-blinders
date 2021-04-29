@@ -9,15 +9,16 @@ public class ControlsInput : MonoBehaviour
 
     public bool invIsOpen = false;
 
+    [SerializeField] GameObject HUDCanvas;
+
     void Awake ()
     {
-        // Makes a new PlayerInput = to controls
         controls = new PlayerInput();
+        HUDCanvas.GetComponent<CanvasGroup>().alpha = 0f;
 
-        /* 
-                When a Button that is bound to any of the Buttons Action map actions is 
-                pressed call the function after the =>. (Exactly the same for all the others too)
-        */
+        // When a Button that is bound to any of the Buttons Action map actions is 
+        // pressed call the function after the =>. (Exactly the same for all the others too)
+
         controls.Buttons.AttackInteract.performed += ctx => AttackOrInteract();
 
         controls.Buttons.Inventory.performed += ctx => Inventory();
@@ -48,11 +49,19 @@ public class ControlsInput : MonoBehaviour
         {
             Debug.Log("Opening Inventory");
             invIsOpen = true;
+            HUDCanvas.GetComponent<CanvasGroup>().alpha = 1f;
+            HUDCanvas.GetComponent<CanvasGroup>().interactable = true;
+            HUDCanvas.GetComponent<CanvasGroup>().blocksRaycasts = true;
+            this.gameObject.GetComponent<PlayerMovement>().enabled = false;
         }
         else if (invIsOpen)
         {
             Debug.Log("Closing Inventory");
             invIsOpen = false;
+            HUDCanvas.GetComponent<CanvasGroup>().alpha = 0f;
+            HUDCanvas.GetComponent<CanvasGroup>().interactable = false;
+            HUDCanvas.GetComponent<CanvasGroup>().blocksRaycasts = false;
+            this.gameObject.GetComponent<PlayerMovement>().enabled = true;
         }
     }
 

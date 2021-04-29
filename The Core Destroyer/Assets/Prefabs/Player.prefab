@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3686596892407328115}
   - component: {fileID: 2073333921}
   - component: {fileID: 4485443605340992906}
+  - component: {fileID: 3103599151054200921}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -46,6 +47,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -119,10 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5b743400ee5674b8da2217e55e5541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: b622c290dfa5c204b9247184d23e2a87, type: 2}
-  equipment: {fileID: 11400000, guid: af7de89932f85cc4fba0bad4bee5b606, type: 2}
-  noSelection: 1
-  _speed: 12
+  speed: 0
 --- !u!114 &2073333921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invIsOpen: 0
+  HUDCanvas: {fileID: 0}
 --- !u!61 &4485443605340992906
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,3 +162,48 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.88, y: 6.96}
   m_EdgeRadius: 0
+--- !u!114 &3103599151054200921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686596892407328111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551c3abbae4564e409ab2739db7915ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes:
+  - type: 0
+    value:
+      baseValue: 0
+      modifiedValue: 0
+  - type: 1
+    value:
+      baseValue: 0
+      modifiedValue: 0
+  - type: 2
+    value:
+      baseValue: 0
+      modifiedValue: 0
+  - type: 3
+    value:
+      baseValue: 0
+      modifiedValue: 0
+  - type: 4
+    value:
+      baseValue: 0
+      modifiedValue: 0
+  - type: 5
+    value:
+      baseValue: 0
+      modifiedValue: 0
+  - type: 6
+    value:
+      baseValue: 0
+      modifiedValue: 0
+  equipmentStatsTexts: {fileID: 0}
+  inventory: {fileID: 11400000, guid: b622c290dfa5c204b9247184d23e2a87, type: 2}
+  equipment: {fileID: 11400000, guid: af7de89932f85cc4fba0bad4bee5b606, type: 2}
+  noSelection: 1

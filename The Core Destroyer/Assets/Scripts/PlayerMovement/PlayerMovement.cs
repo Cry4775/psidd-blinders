@@ -9,21 +9,17 @@ public class PlayerMovement : MonoBehaviour
     // Brackeys that explains how it works https://www.youtube.com/watch?v=Pzd8NhcRzVo&t=685s
     
     #region REFERENCES
+    PlayerInput playerInput; 
+    Rigidbody2D rb2D;
+    PlayerStats playerStats;
+    
 
-        // For the Input Action Asset in the "Core/Input Action Assets" folder
-        PlayerInput playerInput; 
-
-        // For the player Rigidbody2D
-        Rigidbody2D rb2D;
-
-        
 
     #endregion
 
     #region FLOATS
 
-    [Tooltip("How fast the player moves")]
-        public float _speed = 12f;
+    public float speed;
 
     #endregion
 
@@ -37,30 +33,15 @@ public class PlayerMovement : MonoBehaviour
     
     void Awake ()
     {   
-        #region Player Input Setup
 
-            // Makes a new PlayerInput = to playerInput
-            playerInput = new PlayerInput();
+        playerInput = new PlayerInput();
 
-            /* 
-                When a Button/Joystick movement that is bound to the MoveInput action is 
-                pressed/active call the function OnMovementChanged
-            */
-            playerInput.Movement.MoveInput.performed += OnMovementChanged;
-
-            /* 
-                When a Button/Joystick movement that is bound to the MoveInput action is 
-                no longer pressed call the function OnMovementChanged
-            */
-            playerInput.Movement.MoveInput.canceled += OnMovementChanged;
-
-        #endregion
+        playerInput.Movement.MoveInput.performed += OnMovementChanged;
+        playerInput.Movement.MoveInput.canceled += OnMovementChanged;
 
         rb2D = GetComponent<Rigidbody2D>();
-
-        
     }
-    
+
     #region Player Input Setup
 
     // This function is called when the object becomes enabled or active
@@ -101,7 +82,8 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate ()
     {
         // Moves the Rigidbody in the direction of moveVectors x and y by _speed 
-        rb2D.MovePosition((Vector2) rb2D.position + moveVector * _speed * Time.fixedDeltaTime);
+
+        rb2D.MovePosition((Vector2) rb2D.position + moveVector * speed * Time.fixedDeltaTime);
     }
 
     

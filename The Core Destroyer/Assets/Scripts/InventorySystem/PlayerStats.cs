@@ -10,6 +10,8 @@ public class PlayerStats : MonoBehaviour
 {
     public Attribute[] attributes;
 
+    PlayerMovement playerMovement;
+
     public GameObject equipmentStatsTexts;
 
     // For the inventory
@@ -17,6 +19,10 @@ public class PlayerStats : MonoBehaviour
     public InventoryObject equipment;
     public bool noSelection = true;
 
+    private void Awake()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+    }
 
     void Start()
     {
@@ -34,6 +40,14 @@ public class PlayerStats : MonoBehaviour
         equipment.Load();
 
         //inventory.SpawnItem(0, 1, new Vector3(1, 1, 0));
+
+        //if firstTime
+        //if KNIGHT
+        attributes[(int)Stats.Strength].value.BaseValue = 7;
+        attributes[(int)Stats.Vitality].value.BaseValue = 10;
+        attributes[(int)Stats.Dexterity].value.BaseValue = 3;
+        attributes[(int)Stats.Speed].value.BaseValue = 5;
+
     }
 
     public void OnBeforeSlotUpdate(InventorySlot _slot)
@@ -129,6 +143,7 @@ public class PlayerStats : MonoBehaviour
                 break;
             case Stats.Speed:
                 //equipmentStatsTexts.transform.Find("Speed").GetComponent<TextMeshProUGUI>().text = "Speed: " + attribute.value.ModifiedValue.ToString();
+                playerMovement.speed = (attribute.value.ModifiedValue / 100) + 7f;
                 break;
             case Stats.Damage:
                 equipmentStatsTexts.transform.Find("Damage").GetComponent<TextMeshProUGUI>().text = "Damage: " + attribute.value.ModifiedValue.ToString();

@@ -12,7 +12,9 @@ public delegate void ModifiedEvent();
 public class ModifiableInt
 {
     [SerializeField] int baseValue;
-    public int BaseValue { get { return baseValue; } set { baseValue = value; UpdateModifiedValue(); } }
+    public int BaseValue { get { return baseValue; } 
+                           set { baseValue = value; UpdateModifiedValue(); } 
+                         }
 
     [SerializeField] int modifiedValue;
     public int ModifiedValue { get { return modifiedValue; } set { modifiedValue = value; } }

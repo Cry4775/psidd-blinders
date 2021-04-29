@@ -309,6 +309,7 @@
 -r:"C:/Program Files/Unity/2021.1.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll"
 -r:"C:/Program Files/Unity/2021.1.4f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll"
 -r:"C:/Program Files/Unity/2021.1.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
+-r:"C:/Users/Pierdamiano/Documents/GitHub/psidd-blinders/The Core Destroyer/Library/PackageCache/com.unity.cinemachine@2.7.3/Runtime/ThirdParty/clipper_library.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Mathematics.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipeline.Universal.ShaderLibrary.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"

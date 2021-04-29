@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c93023becbcf1e45a22c7ed8888ef25, type: 3}
   m_Name: Iron Sword
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: -6447425667752118579, guid: 6f16707f4e7f8c146bd98977cd436f9e,
-    type: 3}
+  uiDisplay: {fileID: 21300000, guid: 80dec7af09a6b5245828d1dd78ee5d59, type: 3}
   stackable: 0
   type: 1
   description: 
